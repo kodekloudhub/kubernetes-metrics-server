@@ -30,7 +30,7 @@ spec:
         emptyDir: {}
       containers:
       - name: metrics-server
-        image: k8s.gcr.io/metrics-server/metrics-server:v0.6.2
+        image: k8s.gcr.io/metrics-server/metrics-server:v0.5.2
         args:
           - --cert-dir=/tmp
           - --metric-resolution=15s
