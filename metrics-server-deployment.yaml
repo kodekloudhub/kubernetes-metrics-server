@@ -30,10 +30,10 @@ spec:
         emptyDir: {}
       containers:
       - name: metrics-server
-        image: k8s.gcr.io/metrics-server-amd64:v0.3.1
-        command:
-          - /metrics-server
-          - --metric-resolution=5s
+        image: k8s.gcr.io/metrics-server/metrics-server:v0.5.2
+        args:
+          - --cert-dir=/tmp
+          - --metric-resolution=15s
           - --kubelet-preferred-address-types=InternalIP
           - --kubelet-insecure-tls
         imagePullPolicy: Always
